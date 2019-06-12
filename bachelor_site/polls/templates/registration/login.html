@@ -1,0 +1,20 @@
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<body bgcolor="#E6E6FA">
+<div style="text-align:center">
+<h1>Login</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+<p>
+</p>
+<img src="https://cdn-images-1.medium.com/max/1200/1*_ZMgTsJGmR743ngZ7UxN9w.png" alt="ML" class="center" width="1000px" height="700px" opacity="0.5">
+</div>
+</body>
+{% endblock %}

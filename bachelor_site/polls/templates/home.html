@@ -5,10 +5,39 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+<body bgcolor="#E6E6FA">
+<div style="text-align:center">
+<div style="text-align:right"><p><a href="{% url 'logout' %}">logout</a></p></div>
+  <h1>
   Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">logout</a></p>
+  <p></p>
+  In order to run topic modeling on a dataset, you have to complete the following form:
+  </h1>
+  <p><form>
+	Dataset filename: <input type = "text" name = "filename" />
+	<p></p>
+	Would you like to run topic modeling on:
+	<input type = "checkbox" name = "single" value = "on"> A single article
+	<input type = "checkbox" name = "collections" value = "on"> The entire dataset
+	<p></p>
+	Which algorithms would you like to use for topic modeling?
+	<input type = "checkbox" name = "nmf" value = "on"> NMF
+	<input type = "checkbox" name = "lda" value = "on"> LDA
+	<input type = "checkbox" name = "lsa" value = "on"> LSA
+	<p></p>
+	How many labels from the dataset do you want to get data from?
+	Write the number of labels here: <input type = "text" name = "labels_no" />
+	<p></p>
+	Type the names of the labels separated by SPACE here: <input type = "text" name = "labels" />
+	<p></p>
+    <input type = "submit" name = "submit" value = "Submit" /><input type = "reset" name = "reset"  value = "Reset" />
+  </form></p>
+  <p></p>
+  <img src="https://cdn-images-1.medium.com/max/1200/1*_ZMgTsJGmR743ngZ7UxN9w.png" alt="ML" class="center" width="1000px" height="700px" style="filter:alpha(opacity=40)">
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">login</a>
+</div>
+</body>
 {% endif %}
 {% endblock %}

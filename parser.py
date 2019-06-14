@@ -10,7 +10,7 @@ class Parser:
 		self.data_labels = []
 
 	def print_help(self):
-		print("Usage: python3 bachelor_project.py [-h]", end= " ")
+		print("Usage: python3 bachelor_project.py [-h]", end = " ")
 		print("<dataset_filename> <dataset_structure> <algorithms>", end = " ")
 		print("[topic_visualization] <labels>")
 		print("Options and arguments:")
@@ -22,8 +22,10 @@ class Parser:
 		print("Indicates if topic modeling should be done on each", end = " ")
 		print("article\nseparately, or on the entire", end = " ")
 		print("collection of articles on the dataset", end = "\n\n")
-		print("algorthms: --nmf | --lda | --lsa")
-		print("The algorithms used for topic modelling", end = "\n\n")
+		print("algorthms: --nmf | --lda | --lsa | --enhanced_lda")
+		print("The algorithms used for topic modelling.", end = " ")
+		print("Enhanced LDA works only in --unique mode,", end=" ")
+		print("and finds out the optimal number of topics for modeling.", end = "\n\n")
 		print("topic_visualization: --visualize")
 		print("This option is used in the scope of visualizing", end = " ")
 		print("the topics using pLDAvis.gensim. The default value is False", end = "\n\n")
@@ -41,7 +43,7 @@ class Parser:
 				self.filename = self.args[1]
 			elif self.args[i] == "--unique" or self.args[i] == "--collection":
 				self.type_of_dataset = self.args[i]
-			elif self.args[i] == "--nmf" or self.args[i] == "--lda" or self.args[i] == "--lsa":
+			elif self.args[i] == "--nmf" or self.args[i] == "--lda" or self.args[i] == "--lsa" or self.args[i] == "--enhanced_lda":
 				self.algorithms_used.append(self.args[i])
 			elif self.args[i] == "--visualize":
 				self.topic_visualization = True

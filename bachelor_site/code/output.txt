@@ -1,0 +1,18 @@
+Article 10 on NMF<br>Topic 0:
+york exec fact faced extensively expressly explanation executive exchanged ensured<br>Topic 1:
+news york family factor fact faced extensively expressly explanation executive<br>Topic 2:
+house york exec faced extensively expressly explanation executive exchanged factor<br><br><br><br>
+Article 10 on LDA<br>Topic 0:
+obama state use president comey account indicted july time statement<br>Topic 1:
+clinton email fbi clintonobama private secretary personal obamas text comeys<br>Topic 2:
+prosecution interview investigation department know meaning mr disclosure problem matter<br><br><br><br>
+Article 10 on enhanced LDA<br>Topic 0:
+email state comey account indicted statement key indictment campaign adviser<br>Topic 1:
+secretary department personal comeys decision going clear national report march<br>Topic 2:
+interview investigation know meaning disclosure understanding reference exchange information classified<br>Topic 3:
+fbi clintonobama private president problem july hillary news remark house<br>Topic 4:
+clinton prosecution obama use obamas text mr matter time executive<br><br><br><br>
+Article 10 on LSA<br>Topic 0:
+clinton text state matter know july house campaign executive statement<br>Topic 1:
+email department comey text private state obamas july use know<br>Topic 2:
+obama department text private state matter july know campaign statement<br><br><br><br>

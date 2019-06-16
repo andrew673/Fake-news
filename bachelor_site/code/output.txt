@@ -1,18 +1,14 @@
-Article 235 on NMF<br>Topic 0:
-error user provide proceed message mesage main detailed contributor context<br>Topic 1:
-contributor user provide proceed message mesage main error detailed context<br>Topic 2:
-detailed user provide proceed message mesage main error contributor context<br><br><br><br>
-Article 235 on LDA<br>Topic 0:
-detailed provide mesage context message contributor user proceed main error<br>Topic 1:
-error main message proceed context contributor provide mesage user detailed<br>Topic 2:
-contributor user context proceed mesage main provide detailed error message<br><br><br><br>
-Article 235 on enhanced LDA<br>Topic 0:
-detailed context message provide mesage contributor user proceed main error<br>Topic 1:
-error main message proceed context contributor provide mesage user detailed<br>Topic 2:
-contributor user context proceed mesage main provide detailed error message<br>Topic 3:
-provide proceed contributor user context error detailed main message mesage<br>Topic 4:
-provide mesage message context error user detailed contributor main proceed<br><br><br><br>
-Article 235 on LSA<br>Topic 0:
-error detailed mesage proceed context user message provide contributor main<br>Topic 1:
-user provide proceed message context error detailed mesage contributor main<br>Topic 2:
-mesage proceed contributor message error context user main provide detailed<br><br><br><br>
+On model LDA<br>Topic 0: 0.016*"oil" + 0.012*"war" + 0.010*"iraq" + 0.008*"bank" + 0.008*"russia" + 0.008*"europe" + 0.008*"global" + 0.008*"crisis" + 0.007*"financial" + 0.007*"interest"<br>Topic 1: 0.036*"market" + 0.011*"price" + 0.011*"company" + 0.010*"industry" + 0.009*"bank" + 0.008*"global" + 0.008*"analysis" + 0.007*"month" + 0.007*"financial" + 0.006*"high"<br>Topic 2: 0.010*"god" + 0.009*"space" + 0.008*"war" + 0.008*"agency" + 0.007*"nation" + 0.007*"america" + 0.007*"event" + 0.006*"military" + 0.006*"national" + 0.006*"order"<br>Topic 3: 0.008*"court" + 0.007*"program" + 0.007*"canada" + 0.007*"data" + 0.007*"security" + 0.007*"education" + 0.006*"family" + 0.006*"student" + 0.006*"ban" + 0.006*"area"<br>Topic 4: 0.010*"feel" + 0.008*"message" + 0.007*"choice" + 0.006*"youre" + 0.005*"bad" + 0.005*"kind" + 0.005*"phone" + 0.005*"video" + 0.005*"home" + 0.005*"available"<br>Topic 5: 0.016*"clinton" + 0.013*"obama" + 0.010*"email" + 0.010*"department" + 0.008*"administration" + 0.007*"congress" + 0.007*"committee" + 0.006*"investigation" + 0.006*"meeting" + 0.006*"official"<br>Topic 6: 0.015*"russia" + 0.014*"russian" + 0.008*"war" + 0.007*"thats" + 0.006*"really" + 0.006*"change" + 0.006*"medium" + 0.005*"donald" + 0.005*"kind" + 0.005*"book"<br>Topic 7: 0.008*"court" + 0.007*"night" + 0.006*"full" + 0.006*"terrorist" + 0.006*"official" + 0.006*"school" + 0.005*"action" + 0.005*"gun" + 0.004*"number" + 0.004*"operation"<br>Topic 8: 0.008*"feel" + 0.007*"look" + 0.007*"really" + 0.006*"mind" + 0.006*"money" + 0.006*"feeling" + 0.006*"violent" + 0.006*"kind" + 0.006*"value" + 0.005*"action"<br>Topic 9: 0.010*"cancer" + 0.008*"food" + 0.007*"cell" + 0.007*"found" + 0.007*"death" + 0.006*"school" + 0.006*"study" + 0.006*"doctor" + 0.005*"age" + 0.005*"health"<br><br><br><br>
+
+Coherence Score C_V:  0.364139872226
+<br>
+
+Coherence Score U_MASS:  -1.95404339465
+<br>
+On model LSA<br>Topic 0: -0.223*"market" + -0.142*"value" + -0.141*"action" + -0.123*"step" + -0.122*"change" + -0.116*"event" + -0.113*"really" + -0.109*"look" + -0.109*"money" + -0.105*"war"<br>Topic 1: 0.337*"market" + 0.312*"oil" + 0.233*"iraq" + -0.165*"step" + -0.158*"value" + -0.146*"action" + 0.141*"industry" + 0.138*"global" + 0.137*"war" + -0.133*"fear"<br>Topic 2: 0.348*"clinton" + -0.313*"market" + 0.262*"email" + 0.252*"space" + 0.198*"agency" + 0.181*"secretary" + 0.156*"department" + 0.154*"obama" + 0.141*"security" + 0.132*"national"<br>Topic 3: -0.561*"oil" + -0.446*"iraq" + 0.359*"market" + -0.129*"production" + -0.127*"reserve" + -0.105*"value" + 0.103*"clinton" + -0.094*"industry" + 0.089*"email" + 0.085*"kind"<br>Topic 4: 0.458*"space" + -0.319*"clinton" + -0.238*"email" + 0.213*"event" + 0.206*"agency" + 0.173*"research" + 0.167*"order" + -0.156*"russia" + 0.155*"market" + -0.125*"war"<br>Topic 5: -0.386*"war" + 0.330*"clinton" + 0.298*"email" + -0.243*"russia" + -0.186*"crisis" + -0.164*"russian" + 0.140*"company" + -0.124*"history" + 0.121*"market" + -0.121*"conflict"<br>Topic 6: -0.276*"market" + 0.235*"kind" + -0.205*"global" + 0.185*"thats" + -0.155*"clinton" + -0.148*"value" + -0.138*"analysis" + -0.134*"device" + -0.131*"action" + 0.124*"youre"<br>Topic 7: -0.344*"bank" + 0.288*"russia" + 0.226*"russian" + -0.225*"violent" + -0.201*"china" + 0.185*"market" + 0.154*"space" + -0.138*"financial" + 0.123*"war" + -0.122*"rate"<br>Topic 8: -0.267*"russia" + -0.257*"violent" + -0.245*"china" + -0.240*"russian" + 0.196*"bank" + -0.175*"company" + 0.172*"clinton" + 0.160*"space" + 0.153*"email" + 0.150*"crisis"<br>Topic 9: -0.363*"company" + 0.241*"violent" + -0.197*"share" + 0.170*"market" + -0.152*"russia" + -0.149*"update" + 0.148*"kind" + 0.143*"analysis" + -0.139*"profit" + -0.135*"space"<br><br><br><br>
+
+Coherence Score C_V:  0.369704381538
+<br>
+
+Coherence Score U_MASS:  -3.23724489553
+<br>

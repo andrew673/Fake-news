@@ -69,45 +69,50 @@ class TopicModelingClass:
 				self.dictionary, sort_topics=True)
 			pyLDAvis.show(nmf_display)"""
 
-	def apply_lda_on_articles(self):
+	def apply_lda_on_articles(self, model_name):
 		self.lda_model = LdaModel(corpus=self.corpus, id2word=self.dictionary, \
 			chunksize=self.chunksize, alpha='auto', eta='auto', \
 			iterations=self.iterations, num_topics=self.num_topics, \
 			passes=self.passes, eval_every=self.eval_every)
 		output = self.lda_model.print_topics()
-		output = output.str.replace(r'[^\w\s]', '')
-		output = output.str.replace(r'[0-9]', '')
-		print(output)
+		print("On model %s" % (model_name), end = "<br>")
+		for i in range(len(output)):
+			text = output[i][1].replace(r'[^\w\s]', '')
+			text = text.replace(r'[0-9]', '')
+			print("Topic %d: %s" % (i, text), end = "<br>")
 		print("<br><br><br>")
 
 		self.get_coherence_cv(self.lda_model)
 		print("<br>")
 		self.get_coherence_umass(self.lda_model)
+		print("<br>")
 
-		if self.topic_visualization is True:
-			lda_display = pyLDAvis.gensim.prepare(self.lda_model, self.corpus, \
-				self.dictionary, sort_topics=True)
-			pyLDAvis.show(lda_display)
-
-	def apply_lsa_on_articles(self):
+	def apply_lsa_on_articles(self, model_name):
 		self.lsa_model = LsiModel(corpus=self.corpus, id2word=self.dictionary, \
 			chunksize=self.chunksize, num_topics=self.num_topics)
 		output = self.lsa_model.print_topics()
-		output = output.str.replace(r'[^\w\s]', '')
-		output = output.str.replace(r'[0-9]', '')
-		print(output)
+		print("On model %s" % (model_name), end = "<br>")
+		for i in range(len(output)):
+			text = output[i][1].replace(r'[^\w\s]', '')
+			text = text.replace(r'[0-9]', '')
+			print("Topic %d: %s" % (i, text), end = "<br>")
 		print("<br><br><br>")
 
 		self.get_coherence_cv(self.lsa_model)
 		print("<br>")
 		self.get_coherence_umass(self.lsa_model)
+		print("<br>")
 
 	def run_topic_modeling(self):
 		for alg in self.algorithms_used:
 			if alg == "--nmf":
 				self.apply_nmf_on_articles()
 			elif alg == "--lda":
-				self.apply_lda_on_articles()
+				self.apply_lda_on_articles("LDA")
 			elif alg == "--lsa":
-				self.apply_lsa_on_articles()
+				self.apply_lsa_on_articles("LSA")
 			self.plot_n_components_graph(alg)
+		if self.topic_visualization is True:
+			lda_display = pyLDAvis.gensim.prepare(self.lda_model, self.corpus, \
+				self.dictionary, sort_topics=True)
+			pyLDAvis.show(lda_display)
